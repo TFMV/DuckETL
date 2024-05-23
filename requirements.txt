@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+duckdb
+asyncpg
+pandas
+pyyaml
+google-cloud-storage
+fsspec
+gcsfs
