@@ -1,6 +1,6 @@
 # DuckETL
 
-DuckETL is a data pipeline project that demonstrates how to move data from a Parquet file stored on Google Cloud Storage (GCS) to a Postgres database for further analysis and visualization. The project utilizes DuckDB for querying and aggregating data directly from the Parquet file in GCS and FastAPI to manage the ETL process.
+DuckETL is a data pipeline project that demonstrates how to move data from a Parquet file stored on Storj (storj.io) to a Postgres database for further analysis and visualization. The project utilizes DuckDB for querying and aggregating data directly from the Parquet file in Storj and FastAPI to manage the ETL process.
 
 ![DuckETL](assets/duck.webp)
 
@@ -32,22 +32,26 @@ DuckETL is a data pipeline project that demonstrates how to move data from a Par
 
 2. **Configure `config.yaml`**
 
-    Update the `config.yaml` file with your GCS and Postgres details:
+    Update the `config.yaml` file with your Storj and Postgres details:
 
     ```yaml
-    postgres:
-      host: localhost
-      port: 5432
-      user: postgres
-      password: mysecretpassword
-      dbname: yourdbname
+        postgres:
+        host: localhost
+        port: 5432
+        user: postgres
+        password: mysecretpassword
+        dbname: tfmv
 
-    gcs:
-      service_account_key: /path/to/your/sa.json
-      bucket_name: your-bucket-name
-      parquet_file_path: path/to/your/file.parquet
 
-    target_table: your_target_table
+        storj:
+        endpoint: gateway.storjshare.io
+        access_key_id: youraccesskey
+        secret_access_key: yoursecretkey
+        bucket_name: yourbucketname
+        parquet_file_path: flights.parquet
+
+        target_table: flights_agg
+
     ```
 
 3. **Build and Run the Docker Container**
@@ -75,4 +79,5 @@ POST /etl
 Ensure that your local Postgres instance is accessible from within the Docker container. You may need to configure your network settings to allow connections.
 
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
