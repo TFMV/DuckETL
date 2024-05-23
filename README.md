@@ -34,25 +34,25 @@ DuckETL is a data pipeline project that demonstrates how to move data from a Par
 
     Update the `config.yaml` file with your Storj and Postgres details:
 
-    ```yaml
-        postgres:
-        host: localhost
-        port: 5432
-        user: postgres
-        password: mysecretpassword
-        dbname: tfmv
+```yaml
+postgres:
+    host: localhost
+    port: 5432
+    user: postgres
+    password: mysecretpassword
+    dbname: tfmv
 
 
-        storj:
-        endpoint: gateway.storjshare.io
-        access_key_id: youraccesskey
-        secret_access_key: yoursecretkey
-        bucket_name: yourbucketname
-        parquet_file_path: flights.parquet
+storj:
+    endpoint: gateway.storjshare.io
+    access_key_id: youraccesskey
+    secret_access_key: yoursecretkey
+    bucket_name: yourbucketname
+    parquet_file_path: flights.parquet
 
-        target_table: flights_agg
+target_table: flights_agg
 
-    ```
+```
 
 3. **Build and Run the Docker Container**
 
