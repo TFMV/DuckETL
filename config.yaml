@@ -2,12 +2,15 @@ postgres:
   host: localhost
   port: 5432
   user: postgres
-  password: notapassword
+  password: mysecretpassword
   dbname: tfmv
 
-gcs:
-  bucket_name: tfmv-fuse
+
+storj:
+  endpoint: gateway.storjshare.io
+  access_key_id: youraccesskey
+  secret_access_key: yoursecretkey
+  bucket_name: yourbucketname
   parquet_file_path: flights.parquet
-  service_account_key: /app/sa.json
 
 target_table: flights_agg

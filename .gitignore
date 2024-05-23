@@ -160,3 +160,7 @@ cython_debug/
 #.idea/
 
 sa.json
+
+data/
+
+config.yaml

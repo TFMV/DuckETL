@@ -1,9 +1,9 @@
 fastapi
 uvicorn
 duckdb
-asyncpg
-pandas
-pyyaml
-google-cloud-storage
 fsspec
 gcsfs
+asyncpg
+s3fs
+pyyaml
+google-cloud-storage

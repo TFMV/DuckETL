@@ -2,11 +2,14 @@ version: '3.8'
 
 services:
   app:
-    build: .
-    volumes:
-      - .:/app
-      - ./sa.json:/app/sa.json
-    ports:
-      - "8000:8000"
+    image: ducketl
+    build:
+      context: .
     environment:
       - CONFIG_PATH=/app/config.yaml
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
