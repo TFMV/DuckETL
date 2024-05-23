@@ -1,0 +1,13 @@
+postgres:
+  host: localhost
+  port: 5432
+  user: postgres
+  password: notapassword
+  dbname: tfmv
+
+gcs:
+  bucket_name: tfmv-fuse
+  parquet_file_path: flights.parquet
+  service_account_key: /app/sa.json
+
+target_table: flights_agg
