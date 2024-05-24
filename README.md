@@ -18,7 +18,7 @@ DuckETL is a data pipeline project that demonstrates how to move data from a Par
 
 - Docker
 - Docker Compose
-- Google Cloud Storage bucket with the Parquet file
+- Storj Cloud Storage bucket with the Parquet file
 - Postgres database
 
 ### Setup
